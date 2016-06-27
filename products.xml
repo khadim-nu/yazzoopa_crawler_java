@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+		<link rel="shortcut icon" href="http://www.dftme.com/icon.ico" type="image/x-icon" />
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+		<title>Fluid | Hazardous Area | UV - DFT</title>
+		<link rel="stylesheet" type="text/css" href="../../dftcss/dftT1.css" />
+		<style type="text/css">/*<![CDATA[*/
+			#navigation {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:24px;
+			color: #666;
+			padding-top:6px;
+			}
+			#navigation ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:34px;
+			}
+			#navigation li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+			#navigation2 {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:18px;
+			color: #666;
+			background-color: #EBEBEB;
+			}
+			#navigation2 ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation2 ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:49px;
+			}
+			#navigation2 li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation2 li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation2 li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+			#navigation3 {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:18px;
+			color: #666;
+			background-color: #EBEBEB;
+			}
+			#navigation3 ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation3 ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:40px;
+			}
+			#navigation3 li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation3 li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation3 li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+			#navigation4 {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:18px;
+			color: #666;
+			}
+			#navigation4 ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation4 ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:26px;
+			}
+			#navigation4 li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation4 li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation4 li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+		/*]]>*/</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">/*<![CDATA[*//*]]>*/</script>
+		<script type="text/javascript">/*<![CDATA[*/
+			if (typeof jQuery != 'undefined') {
+			jQuery(document).ready(function($) {
+			var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+			var baseHref = '';
+			if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+			jQuery('a').on('click', function(event) {
+			var el = jQuery(this);
+			var track = true;
+			var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+			var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+			if (!href.match(/^javascript:/i)) {
+			var elEv = []; elEv.value=0, elEv.non_i=false;
+			if (href.match(/^mailto\:/i)) {
+			elEv.category = "email";
+			elEv.action = "click";
+			elEv.label = href.replace(/^mailto\:/i, '');
+			elEv.loc = href;
+			}
+			else if (href.match(filetypes)) {
+			var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+			elEv.category = "download";
+			elEv.action = "click-" + extension[0];
+			elEv.label = href.replace(/ /g,"-");
+			elEv.loc = baseHref + href;
+			}
+			else if (href.match(/^https?\:/i) && !isThisDomain) {
+			elEv.category = "external";
+			elEv.action = "click";
+			elEv.label = href.replace(/^https?\:\/\//i, '');
+			elEv.non_i = true;
+			elEv.loc = href;
+			}
+			else if (href.match(/^tel\:/i)) {
+			elEv.category = "telephone";
+			elEv.action = "click";
+			elEv.label = href.replace(/^tel\:/i, '');
+			elEv.loc = href;
+			}
+			else track = false;
+			if (track) {
+			_gaq.push(['_trackEvent', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i]);
+			if ( el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+			setTimeout(function() { location.href = elEv.loc; }, 400);
+			return false;
+			}
+			}
+			}
+			});
+			});
+			}
+		/*]]>*/</script>
+		<script type="text/javascript">/*<![CDATA[*/
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-20923919-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		/*]]>*/</script>
+	</head>
+	
+<body>
+		<div id="leftBanner"></div>
+		<div id="rightBanner"></div>
+		<div id="bottomBanner">
+			Copyright
+			<span style="font-size: 14px">©</span>
+			2013 Daly Fluid Technologies (L.L.C.)
+		</div>
+		<div id="topBanner">
+			<div class="banner1">
+				<div class="conttop">
+					<div class="inscont">
+						Available Today in the UAE
+						<br />
+						<div class="inscont2">
+							Dubai:
+							<br />
+							Abu Dhabi:
+						</div>
+						<div class="inscont3">
+							Tel:
+							<br />
+							Tel:
+							<br />
+							Eml:
+						</div>
+						<div class="inscont2">
+							+971 4 887 8185
+							<br />
+							+971 2 673 6349
+							<br />
+							<a href="mailto:sales@dftme.com" style="color:#666; text-decoration:underline">sales@dftme.com</a>
+						</div>
+						<div class="inscont3">
+							Fax:
+							<br />
+							Fax:
+						</div>
+						<div class="inscont2">
+							+971 4 887 8184
+							<br />
+							+971 2 673 6113
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner2">
+				<div class="bluehl"></div>
+				<div class="menu1">
+					<div id="navigation">
+						<ul>
+							<li style="margin-left: 5px !important;">
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../Products.html" style="color: #000; font-weight: bold">Products</a>
+							</li>
+							<li>
+								<a href="../../Partners.html">Partners</a>
+							</li>
+							<li>
+								<a href="../../Applications.html">Applications</a>
+							</li>
+							<li>
+								<a href="../../Company.html">Company</a>
+							</li>
+							<li>
+								<a href="../../News.html">News</a>
+							</li>
+							<li>
+								<a href="../../Downloads.html">Downloads</a>
+							</li>
+							<li>
+								<a href="../../Contact.html">Contact</a>
+							</li>
+							<li>
+								<a href="../../uv/index.html" style="color:#C3C">Ultraviolet</a>
+							</li>
+							<li>
+								<a href="../../Search.html">Search</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+				<div class="menu2">
+					<div id="navigation2">
+						<ul>
+							<li>
+								<a href="../prodflow.html" style="color: #000; font-weight: bold">Flow</a>
+							</li>
+							<li>
+								<a href="../prodpress.html">Pressure</a>
+							</li>
+							<li>
+								<a href="../prodlev.html">Level</a>
+							</li>
+							<li>
+								<a href="../prodtemp.html">Temperature</a>
+							</li>
+							<li>
+								<a href="../prodvalv.html">Valves</a>
+							</li>
+							<li>
+								<a href="../prodctrl.html">Control</a>
+							</li>
+							<li>
+								<a href="../proddat.html">Data Loggers</a>
+							</li>
+							<li>
+								<a href="../prodleak.html">Leakage Management</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+				<div class="menu2">
+					<div id="navigation3">
+						<ul>
+							<li>
+								<a href="../prodhaz.html">Hazardous Area</a>
+							</li>
+							<li>
+								<a href="../prodlite.html">Hazardous Area Lighting</a>
+							</li>
+							<li>
+								<a href="../prodlys.html">Analysers</a>
+							</li>
+							<li>
+								<a href="../prodfilt.html">Filtration</a>
+							</li>
+							<li>
+								<a href="../proddis.html">Disinfection</a>
+							</li>
+							<li>
+								<a href="../../uv/index.html" style="color:#C3C">Ultraviolet</a>
+							</li>
+							<li>
+								<a href="../prodwater.html">Water Treatment</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+				<div class="menu2">
+					<div id="navigation4">
+						<ul>
+							<li style="color: #000; font-weight: bold">Electromagnetic</li>
+							<li>
+								<a href="fbatt.html">Battery</a>
+							</li>
+							<li>
+								<a href="finsert.html">Insertion</a>
+							</li>
+							<li>
+								<a href="fmech.html">Mechanical</a>
+							</li>
+							<li>
+								<a href="felec.html">Electronic</a>
+							</li>
+							<li>
+								<a href="fultra.html">Ultrasonic</a>
+							</li>
+							<li>
+								<a href="fswtch.html">Switches</a>
+							</li>
+							<li>
+								<a href="fsens.html">Sensors</a>
+							</li>
+							<li>
+								<a href="find.html">Indicators</a>
+							</li>
+							<li>
+								<a href="fctrl.html">Controllers</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+			</div>
+		</div>
+		<div class="spcr3"></div>
+		<div class="main1">
+			<br />
+			<div class="pagehd">Electromagnetic</div>
+			<div class="txtboxhdct">- Please select the type of electromagnetic flowmeter you are interested in from the list for details of that meter.</div>
+			<br />
+			<div class="prdslct">
+				<div class="prdslctinner">
+					<div class="pagetxt">
+						<div class="txtboxhd">Available Electromagnetic Flowmeters:</div>
+						<br />
+						<br />
+						<div id="linksty2">
+							<ul>
+								<li style="font-weight: bold; color: #0082D9">Isoil Mains Powered Electromagnetic Flowmeter</li>
+								<li>
+									<a href="emag/emag1.html">ABB Mains Powered Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag2.html">Isoil Mains Powered with Battery Backup Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag3.html">ABB Mains Powered with Battery Backup Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag4.html">Isoil Battery Powered Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag5.html">ABB Battery Powered Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag10.html">Isoil Mains/Batt&#39; Powered Flowiz Next GPRS Converter</a>
+								</li>
+								<li>
+									<a href="emag/emag6.html">Bürkert Insertion Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag7.html">Isoil Insertion Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag8.html">ABB Insertion Electromagnetic Flowmeter</a>
+								</li>
+								<li>
+									<a href="emag/emag9.html">ABB Insertion E-Mag Flowmeter with Data Logger</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="prdshow">
+				<div class="ptplft">
+					<div class="ppichld">
+						<a href="../../media/lgprods/ml210ms2500.jpg" class="bump" rel="650-371">
+							<img src="../../media/prods/isoilmp01.jpg" alt="Isoil ML210 Converter with MS2500 Sensor. Avail&#39; in Dubai / Abu Dhabi, UAE from DFT" width="190" height="233" border="0" title="Isoil ML210 Larger Image" />
+						</a>
+					</div>
+				</div>
+				<div class="ptprt">
+					<div class="ptxthld">
+						<div class="txtboxhd">Isoil ML210 Converter with MS2500 Sensor</div>
+						<br />
+						<br />
+						The ML210 converter is used where high performances, communication buses, flexibility on the number of inputs/outputs, batch applications and data storing are required.
+						It has programmable functions: low flow rate cut-off, bidirectional, dual range, peak cut-off, empty pipe, alarm limit, batching, low flow rates error curve linearization, etc. The MS 2500 &#39;flanged&#39; sensor , for universal utilisation, is suited for various applications and flow ranges and is available with the widest diameter range.
+					</div>
+				</div>
+				<div class="pbtlft">
+					<div class="ptxthld">
+						<div class="txtboxhd">Specifications:</div>
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Accuracy: ± 0.2% of the read value
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Repeatability: better than ± 0.1%
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						With or without display
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Converter: Aluminium (AISI304 option)
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Sensor: Carbon Steel / SS AISI304/316
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Flow range: 0...113.000 m3/h
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Nominal pressure: from PN 6 to PN 250
+						<br />
+						<img src="../../media/dftbullet.gif" height="9" width="12" />
+						Liquid temperature: from -20 to +180°C
+					</div>
+				</div>
+				<div class="pbtrt">
+					<div class="ptxthld">
+						<div class="txtboxhd">Downloads:</div>
+						<br />
+						<div id="linksty">
+							<ul>
+								<li>
+									<a href="../../media/docs/docs3/Isomag-0309a.pdf" target="_blank">Brochure</a>
+								</li>
+								<li style="color:#0082D9; font-size:14px; text-decoration:none">Datasheets:</li>
+								<li>
+									<a href="../../media/docs/ISOMAG ML210.pdf" target="_blank">ML210 Datasheet</a>
+								</li>
+								<li>
+									<a href="../../media/docs/ISOMAG MS2500.pdf" target="_blank">MS2500 Datasheet</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfloat"></div>
+		<script type="text/javascript" src="../../js/mootools.js">/*<![CDATA[*//*]]>*/</script>
+		<script type="text/javascript" src="../../js/assets.js">/*<![CDATA[*//*]]>*/</script>
+		<script type="text/javascript" src="../../js/bumpbox-2.1.js">/*<![CDATA[*//*]]>*/</script>
+		<script type="text/javascript">/*<![CDATA[*/
+doBump('.bump');
+/*]]>*/</script>
+	</body>
+</html>

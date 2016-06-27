@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+		<link rel="shortcut icon" href="http://www.dftme.com/icon.ico" type="image/x-icon" />
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+		<title>Fluid | Hazardous Area | UV - DFT</title>
+		<meta name="description" content="DFT&#39;s comprehensive product categories." />
+		<link rel="stylesheet" type="text/css" href="dftcss/dftT1.css" />
+		<style type="text/css">/*<![CDATA[*/
+			#navigation {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:24px;
+			color: #666;
+			padding-top:6px;
+			}
+			#navigation ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:34px;
+			}
+			#navigation li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+			#navigation2 {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:18px;
+			color: #666;
+			background-color: #EBEBEB;
+			}
+			#navigation2 ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation2 ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:49px;
+			}
+			#navigation2 li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation2 li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation2 li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+			#navigation3 {
+			font: 10pt Verdana, Arial, Helvetica, sans-serif;
+			width:100%;
+			height:18px;
+			color: #666;
+			background-color: #EBEBEB;
+			}
+			#navigation3 ul {padding:0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;}
+			#navigation3 ul li {
+			display:inline;
+			height:18px;
+			float:left;
+			list-style:none;
+			margin-left:40px;
+			}
+			#navigation3 li a {
+			color:#666;
+			text-decoration:bold;
+			}
+			#navigation3 li a:visited {
+			color:#666;
+			text-decoration:none;
+			}
+			#navigation3 li a:hover {
+			color:#333;
+			text-decoration:none;
+			}
+		/*]]>*/</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">/*<![CDATA[*//*]]>*/</script>
+		<script type="text/javascript">/*<![CDATA[*/
+			if (typeof jQuery != 'undefined') {
+			jQuery(document).ready(function($) {
+			var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+			var baseHref = '';
+			if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+			jQuery('a').on('click', function(event) {
+			var el = jQuery(this);
+			var track = true;
+			var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+			var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+			if (!href.match(/^javascript:/i)) {
+			var elEv = []; elEv.value=0, elEv.non_i=false;
+			if (href.match(/^mailto\:/i)) {
+			elEv.category = "email";
+			elEv.action = "click";
+			elEv.label = href.replace(/^mailto\:/i, '');
+			elEv.loc = href;
+			}
+			else if (href.match(filetypes)) {
+			var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+			elEv.category = "download";
+			elEv.action = "click-" + extension[0];
+			elEv.label = href.replace(/ /g,"-");
+			elEv.loc = baseHref + href;
+			}
+			else if (href.match(/^https?\:/i) && !isThisDomain) {
+			elEv.category = "external";
+			elEv.action = "click";
+			elEv.label = href.replace(/^https?\:\/\//i, '');
+			elEv.non_i = true;
+			elEv.loc = href;
+			}
+			else if (href.match(/^tel\:/i)) {
+			elEv.category = "telephone";
+			elEv.action = "click";
+			elEv.label = href.replace(/^tel\:/i, '');
+			elEv.loc = href;
+			}
+			else track = false;
+			if (track) {
+			_gaq.push(['_trackEvent', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i]);
+			if ( el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+			setTimeout(function() { location.href = elEv.loc; }, 400);
+			return false;
+			}
+			}
+			}
+			});
+			});
+			}
+		/*]]>*/</script>
+		<script type="text/javascript">/*<![CDATA[*/
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-20923919-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		/*]]>*/</script>
+	</head>
+	
+<body>
+		<div id="bottomBanner">
+			Copyright
+			<span style="font-size: 14px">©</span>
+			2013 Daly Fluid Technologies (L.L.C.)
+		</div>
+		<div id="topBanner">
+			<div class="banner1">
+				<div class="conttop">
+					<div class="inscont">
+						Available Today in the UAE
+						<br />
+						<div class="inscont2">
+							Dubai:
+							<br />
+							Abu Dhabi:
+						</div>
+						<div class="inscont3">
+							Tel:
+							<br />
+							Tel:
+							<br />
+							Eml:
+						</div>
+						<div class="inscont2">
+							+971 4 887 8185
+							<br />
+							+971 2 673 6349
+							<br />
+							<a href="mailto:sales@dftme.com" style="color:#666; text-decoration:underline">sales@dftme.com</a>
+						</div>
+						<div class="inscont3">
+							Fax:
+							<br />
+							Fax:
+						</div>
+						<div class="inscont2">
+							+971 4 887 8184
+							<br />
+							+971 2 673 6113
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner2">
+				<div class="bluehl"></div>
+				<div class="menu1">
+					<div id="navigation">
+						<ul>
+							<li style="margin-left: 5px !important;">
+								<a href="index.html">Home</a>
+							</li>
+							<li style="color: #000; font-weight: bold">Products</li>
+							<li>
+								<a href="Partners.html">Partners</a>
+							</li>
+							<li>
+								<a href="Applications.html">Applications</a>
+							</li>
+							<li>
+								<a href="Company.html">Company</a>
+							</li>
+							<li>
+								<a href="News.html">News</a>
+							</li>
+							<li>
+								<a href="Downloads.html">Downloads</a>
+							</li>
+							<li>
+								<a href="Contact.html">Contact &#38; Location</a>
+							</li>
+							<li>
+								<a href="uv/index.html" style="color:#C3C">Ultraviolet</a>
+							</li>
+							<li>
+								<a href="Search.html">Search</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+				<div class="menu2">
+					<div id="navigation2">
+						<ul>
+							<li>
+								<a href="Products/prodflow.html">Flow</a>
+							</li>
+							<li>
+								<a href="Products/prodpress.html">Pressure</a>
+							</li>
+							<li>
+								<a href="Products/prodlev.html">Level</a>
+							</li>
+							<li>
+								<a href="Products/prodtemp.html">Temperature</a>
+							</li>
+							<li>
+								<a href="Products/prodvalv.html">Valves</a>
+							</li>
+							<li>
+								<a href="Products/prodctrl.html">Control</a>
+							</li>
+							<li>
+								<a href="Products/proddat.html">Data Loggers</a>
+							</li>
+							<li>
+								<a href="Products/prodleak.html">Leakage Management</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+				<div class="menu2">
+					<div id="navigation3">
+						<ul>
+							<li>
+								<a href="Products/prodhaz.html">Hazardous Area</a>
+							</li>
+							<li>
+								<a href="Products/prodlite.html">Hazardous Area Lighting</a>
+							</li>
+							<li>
+								<a href="Products/prodlys.html">Analysers</a>
+							</li>
+							<li>
+								<a href="Products/prodfilt.html">Filtration</a>
+							</li>
+							<li>
+								<a href="Products/proddis.html">Disinfection</a>
+							</li>
+							<li>
+								<a href="uv/index.html" style="color:#C3C">Ultraviolet</a>
+							</li>
+							<li>
+								<a href="Products/prodwater.html">Water Treatment</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bluehl"></div>
+			</div>
+		</div>
+		<div class="spcr2"></div>
+		<div class="main1">
+			<br />
+			<div class="pagehd">Products</div>
+			<div class="txtboxhdct">- Select one of the product categories below for more details.</div>
+			<br />
+			<div class="logoBorder">
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodflow.html">
+							<img src="media/flow01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodflow.html">Flow</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">
+							Electromagnetic Flowmeters,
+							<br />
+							Ultrasonic Flowmeters,
+							<br />
+							Logging and Online Data Viewing.
+						</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodpress.html">
+							<img src="media/press01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodpress.html">Pressure</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">
+							Pressure Transmitters,
+							<br />
+							Pressure Gauges &#38; Sensors,
+							<br />
+							Controllers and Differential.
+						</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodlev.html">
+							<img src="media/level01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodlev.html">Level</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Level Sensors / Indicators, Ultrasonic Level, Optical, Float Level Switches.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodtemp.html">
+							<img src="media/temp01.gif" width="70" height="70" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodtemp.html">Temperature</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">
+							Din Rail, In-Head, Sensors, Indicators, Thermowells, Loggers, Transmitters &#38; Accessories.
+							<br />
+						</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodvalv.html">
+							<img src="media/valve01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodvalv.html">Valves</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Solenoid, Diaphragm, Pneumatic, Globe, Angle Seat, Buttefly &#38; Ball Valves. Positioners &#38; Control.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodctrl.html">
+							<img src="media/control01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodctrl.html">Control</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Control Valves, Digital Controllers, Flow, Pressure, Temperature &#38; Level Controllers.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/proddat.html">
+							<img src="media/logger01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/proddat.html">Data Logging</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Universal, Temperature, Humidity, Level, Flow, Pressure, Weather, GPRS &#38; GSM.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodleak.html">
+							<img src="media/leak01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodleak.html">Leakage Management</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Local &#38; GPRS/GSM Loggers, Leak Detection &#38; Location, Pipe Location, Leak Sizing.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodhaz.html">
+							<img src="media/haz01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodhaz.html">Hazardous Area</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Hazardous Area &#38; Explosion Proof Lighting &#38; Junction Boxes, Plugs/Sockets &#38; Cable Glands.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodlite.html">
+							<img src="media/light01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodlite.html">Hazardous Area Lighting</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Cap 437 Helideck, Zone 1 &#38; 21 &#38; Ex de, Floodlights &#38; Wellglass, Emergency &#38; Portable Lighting.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodlys.html">
+							<img src="media/phorp01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodlys.html">Analysers</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">pH or O.R.P. Transmitters &#38;   Conductivity Transmitters, with programmable outputs.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodfilt.html">
+							<img src="media/filt01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodfilt.html">Filtration</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Regenerative Media Filtration, Filter Housings, Cartridges &#38; Bags, Strainers &#38; Ultra-Filtration.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/proddis.html">
+							<img src="media/ozo01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/proddis.html">Disinfection</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Ozone Generation &#38; Disinfection, Liquid &#38; Smoke Disinfection, Food Hygiene and Ultraviolet.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="uv/index.html">
+							<img src="media/uv01.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<a href="uv/index.html" style="color:#C3C">Ultraviolet Disinfection</a>
+						<br />
+						<span class="txtboxhdct">Air, Liquid, Surface, Drinking Water, Waste Water, Swimming Pools, Pharma, Aquaria &#38; Zoos.</span>
+					</div>
+				</div>
+				<div class="prods3">
+					<div class="inprodpic">
+						<a href="Products/prodwater.html">
+							<img src="media/wat01b.gif" border="0" />
+						</a>
+					</div>
+					<div class="inprodtxt">
+						<span class="txtboxhd">
+							<a href="Products/prodwater.html">Water Treatment</a>
+						</span>
+						<br />
+						<span class="txtboxhdct">Filtration, Membrane Ultra-Filtration, Ozone, Conductivity, pH / ORP, Ultraviolet Disinfection.</span>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>
