@@ -30,19 +30,18 @@ public class Gianttiger {
             System.out.println("Database connected");
             //////////////////////////
             String urls[] = {
-              333  "http://www.gianttiger.com/category/house_home/bathroom.do?c=7.100382&sortby=newArrivalsDescend&pp=250&page=",
-              334  "http://www.gianttiger.com/category/house_home/bedroom.do?c=7.100255&sortby=newArrivalsDescend&pp=250&page=",
-              344  "http://www.gianttiger.com/category/house_home/kitchen.do?c=7.100381&sortby=newArrivalsDescend&pp=250&page=",
-              337  "http://www.gianttiger.com/category/house_home/furniture.do?c=7.101361&sortby=newArrivalsDescend&pp=250&page=",
-              350  "http://www.gianttiger.com/category/house_home/hardware.do?c=7.100384&sortby=newArrivalsDescend&pp=250&page=",
-              353  "http://www.gianttiger.com/category/house_home/heating-cooling.do?c=7.101271&sortby=newArrivalsDescend&pp=250&page=",
-              340  "http://www.gianttiger.com/category/house_home/home_decor.do?c=7.100259&sortby=newArrivalsDescend&pp=250&page=",
-              342  "http://www.gianttiger.com/category/house_home/laundry_cleaning.do?c=7.100383&sortby=newArrivalsDescend&pp=250&page=",
-              351  "http://www.gianttiger.com/category/house_home/outdoor.do?c=7.103581&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/bathroom.do?c=7.100382&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/bedroom.do?c=7.100255&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/kitchen.do?c=7.100381&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/furniture.do?c=7.101361&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/hardware.do?c=7.100384&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/heating-cooling.do?c=7.101271&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/home_decor.do?c=7.100259&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/laundry_cleaning.do?c=7.100383&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/outdoor.do?c=7.103581&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/house_home/storage.do?c=7.100261&sortby=newArrivalsDescend&pp=250&page=",
-              350  "http://www.gianttiger.com/category/house_home/window.do?c=7.100256&sortby=newArrivalsDescend&pp=250&page=",
-                
-              "http://www.gianttiger.com/category/ladies/tops.do?c=4.100211&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/house_home/window.do?c=7.100256&sortby=newArrivalsDescend&pp=250&page=",
+                "http://www.gianttiger.com/category/ladies/tops.do?c=4.100211&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/ladies/bottoms.do?c=4.100213&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/ladies/dresses.do?c=4.100231&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/ladies/basics.do?c=4.100236&sortby=newArrivalsDescend&pp=250&page=",
@@ -54,7 +53,6 @@ public class Gianttiger {
                 "http://www.gianttiger.com/category/ladies/accessories.do?c=4.100232&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/ladies/jewelery.do?c=4.101374&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/ladies/outerwear.do?nType=2&sortby=newArrivalsDescend&pp=250&page=",
-              
                 "http://www.gianttiger.com/category/men/tops.do?c=6.100167&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/men/bottoms.do?c=6.100238&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/men/basics.do?c=6.100244&sortby=newArrivalsDescend&pp=250&page=",
@@ -64,11 +62,9 @@ public class Gianttiger {
                 "http://www.gianttiger.com/category/men/workwear.do?c=6.100243&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/men/accessories.do?c=6.100240&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/men/outerwear.do?c=6.100421&sortby=newArrivalsDescend&pp=250&page=",
-                
                 "http://www.gianttiger.com/category/kids/boys.do?c=5.101149&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/kids/girls.do?c=5.101150&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/kids/baby.do?c=5.101151&sortby=newArrivalsDescend&pp=250&page=",
-                
                 "http://www.gianttiger.com/category/lifestyle_entertainment/automotive.do?c=8.100387&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/lifestyle_entertainment/books_dvds.do?c=8.100385&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/lifestyle_entertainment/hobbies.do?c=8.100386&sortby=newArrivalsDescend&pp=250&page=",
@@ -81,7 +77,12 @@ public class Gianttiger {
                 "http://www.gianttiger.com/category/lifestyle_entertainment/sports_fitness.do?c=8.100522&sortby=newArrivalsDescend&pp=250&page=",
                 "http://www.gianttiger.com/category/lifestyle_entertainment/toys_games.do?c=8.100264&sortby=newArrivalsDescend&pp=250&page="
             };
-            String categories[] = {"333", "334", "344", "337", "350"};
+            String categories[] = {"333", "334", "344", "337", "350", "353", "340", "342", "351", "352", "350",
+                "182", "182", "182", "181", "182", "182", "178", "184", "81", "181", "59", "180",
+                "176", "176", "176", "176", "177", "176", "178", "175", "180",
+                "171", "171", "42",
+                "41", "43", "70", "51", "57", "423", "494", "521", "522", "66", "70"};
+
             int ss = 0;
             for (int i = 0; i < urls.length; i++) {
                 ///// Deleting existing products ///
@@ -172,7 +173,8 @@ public class Gianttiger {
             System.out.println(e.getMessage());
         }
 
-        System.out.println("Done.");
+        System.out.println(
+                "Done.");
     }
 
 }

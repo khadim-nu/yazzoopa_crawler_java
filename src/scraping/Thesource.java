@@ -31,7 +31,7 @@ public class Thesource {
             String urls[] = {
                 "http://www.thesource.ca/en-ca/new-at-the-source/c/new-at-the-source?sort=publishingDate&q=%3Arelevance&show=All&text=&view=grid",
                 "http://www.thesource.ca/en-ca/featured-deals/c/featured-deals?q=%3Arelevance&show=All&view=grid",};
-            String categories[] = {"new-arrivals", "featured-deals"};
+            String categories[] = {"523", "50"};
             int ss = 0;
             for (int i = 0; i < urls.length; i++) {
                 ///// Deleting existing products ///
