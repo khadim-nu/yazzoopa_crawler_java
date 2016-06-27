@@ -50,7 +50,11 @@ public class Thesource {
                     String name = subdoc.getElementsByClass("pdp-name").first().text();
                     String id = subdoc.getElementsByClass("pdp-code").first().getElementsByTag("span").text();
                     String price = subdoc.select("input[name=price]").val();
-                    String description = subdoc.getElementsByClass("product-detail-section-content").first().html();
+                    String description = "";
+                    try {
+                        description = subdoc.getElementsByClass("product-details-summary").first().getElementsByTag("p").first().text();
+                    } catch (Exception e) {
+                    }
                     String specification = "";
                     if (subdoc.getElementsByClass("product-detail-specs").hasText()) {
                         specification = subdoc.getElementsByClass("product-detail-specs").first().html();
