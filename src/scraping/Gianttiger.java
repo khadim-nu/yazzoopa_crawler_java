@@ -100,7 +100,7 @@ public class Gianttiger {
                         more = false;
                     }
                     System.out.println(urlstring + page_no);
-                    Document doc = Jsoup.connect(urlstring + page_no).timeout(10 * 1000).get();
+                    Document doc = Jsoup.connect(urlstring + page_no).timeout(100 * 1000).get();
 
                     Elements products = doc.getElementsByClass("directoryCell");
                     int ps = products.size();
@@ -110,7 +110,7 @@ public class Gianttiger {
                         for (Element product : products) {
                             String next_link = "http://www.gianttiger.com" + product.getElementsByClass("thumbheader").first().getElementsByTag("a").attr("href");
                             System.out.println(next_link + page_no);
-                            Document subdoc = Jsoup.connect(next_link).timeout(10 * 1000).get();
+                            Document subdoc = Jsoup.connect(next_link).timeout(100 * 1000).get();
 
                             ///////////////////////////////////////////
                             String name = subdoc.title();
