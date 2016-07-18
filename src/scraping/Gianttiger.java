@@ -85,10 +85,13 @@ public class Gianttiger {
 
             int ss = 0;
             for (int i = 0; i < urls.length; i++) {
+                String tcarr[] = urls[i].split("/");
+                String category_title = tcarr[4];
+                category_title += "=>" + tcarr[5].split("c=")[0].replace(".do?", "");
                 ///// Deleting existing products ///
-                String queryCheck = "DELETE FROM items WHERE category = ?";
+                String queryCheck = "DELETE FROM items WHERE category_title = ?";
                 PreparedStatement st = connection.prepareStatement(queryCheck);
-                st.setString(1, categories[i]);
+                st.setString(1, category_title);
                 int rs = st.executeUpdate();
                 //////////////////////
                 String urlstring = urls[i];
@@ -139,13 +142,13 @@ public class Gianttiger {
                                 // if (!rs.next()) {
                                 Statement stmt = connection.createStatement();
                                 stmt.execute("set names 'utf8'");
-                                String sql = "INSERT INTO items (p_id,category,title,status,link,price,image_url,description,specification,other)"
+                                String sql = "INSERT INTO items (p_id,category_title,title,status,link,price,image_url,description,specification,other)"
                                         + "VALUES(?,?,?,?,?,?,?,?,?,?)";
 
                                 PreparedStatement pstmt = connection.prepareStatement(sql);
                                 // Set the values
                                 pstmt.setString(1, "gianttiger_" + id);
-                                pstmt.setString(2, categories[i]);
+                                pstmt.setString(2, category_title);
                                 pstmt.setString(3, name);
                                 pstmt.setInt(4, in_stock);
                                 pstmt.setString(5, next_link);

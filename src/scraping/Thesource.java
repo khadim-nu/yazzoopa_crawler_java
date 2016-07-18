@@ -30,7 +30,7 @@ public class Thesource {
             System.out.println("Database connected");
             //////////////////////////
             String urls[][] = {
-                {"224", "http://www.thesource.ca/en-ca/computers-and-tablets/ipad-devices-and-tablets/c/scc-1-1"},
+                {"224", "http://www.thesource.ca/en-ca/computers-and-tablets/ipad-devices-and-tablets/c/scc-1-1?q=%3Arelevance&show=All&view=grid"},
                 {"247", "http://www.thesource.ca/en-ca/computers-and-tablets/laptops/c/scc-1-2?q=%3Arelevance&show=All&view=grid"},
                 {"248", "http://www.thesource.ca/en-ca/computers-and-tablets/desktops/c/scc-1-3?q=%3Arelevance&show=All&view=grid"},
                 {"256", "http://www.thesource.ca/en-ca/computers-and-tablets/monitors/c/scc-1-4?q=%3Arelevance&show=All&view=grid"},
@@ -38,7 +38,7 @@ public class Thesource {
                 {"249", "http://www.thesource.ca/en-ca/computers-and-tablets/computer-accessories/c/scc-1-6?q=%3Arelevance&show=All&view=grid"},
                 {"258", "http://www.thesource.ca/en-ca/computers-and-tablets/printers-and-scanners/c/scc-1-7?q=%3Arelevance&show=All&view=grid"},
                 {"244", "http://www.thesource.ca/en-ca/computers-and-tablets/ereaders/c/scc-1-8?q=%3Arelevance&show=All&view=grid"},
-                {"259", "http://www.thesource.ca/en-ca/computers-and-c/c/scc-1-9?q=%3Arelevance&show=All&view=grid"},
+                {"259", "http://www.thesource.ca/en-ca/computers-and-tablets/software/c/scc-1-9?q=%3Arelevance&show=All&view=grid"},
                 {"252", "http://www.thesource.ca/en-ca/computers-and-tablets/hard-drives-and-storage/c/scc-1-10?q=%3Arelevance&show=All&view=grid"},
                 {"251", "http://www.thesource.ca/en-ca/computers-and-tablets/computer-components-and-parts/c/scc-1-11?q=%3Arelevance&show=All&view=grid"},
                 {"525", "http://www.thesource.ca/en-ca/tvs-and-home-theatre/televisions/c/scc-7-1?q=%3Arelevance&show=All&view=grid"},
@@ -51,8 +51,8 @@ public class Thesource {
                 {"532", "http://www.thesource.ca/en-ca/tvs-and-home-theatre/audio-and-speakers/c/scc-7-8?q=%3Arelevance&show=All&view=grid"},
                 {"534", "http://www.thesource.ca/en-ca/cameras-and-camcorders/digital-slr-cameras/c/scc-5-1?q=%3Arelevance&show=All&view=grid"},
                 {"536", "http://www.thesource.ca/en-ca/cameras-and-camcorders/point-and-shoot-cameras/c/scc-5-2?q=%3Arelevance&show=All&view=grid"},
-                {"535", "http://www.thesource.ca/en-ca/cameras-and-camcorders/c/c/scc-5-3?q=%3Arelevance&show=All&view=grid"},
-                {"537", "http://www.thesource.ca/en-ca/cameras-and-camcorders/c/c/scc-5-4?q=%3Arelevance&show=All&view=grid"},
+                {"535", "http://www.thesource.ca/en-ca/cameras-and-camcorders/digital-camcorders/c/scc-5-3?q=%3Arelevance&show=All&view=grid"},
+                {"537", "http://www.thesource.ca/en-ca/cameras-and-camcorders/mirrorless-cameras/c/scc-5-4?q=%3Arelevance&show=All&view=grid"},
                 {"538", "http://www.thesource.ca/en-ca/cameras-and-camcorders/camera-accessories/c/scc-5-5?q=%3Arelevance&show=All&view=grid"},
                 {"539", "http://www.thesource.ca/en-ca/cameras-and-camcorders/camera-lenses/c/scc-5-6?q=%3Arelevance&show=All&view=grid"},
                 {"540", "http://www.thesource.ca/en-ca/cameras-and-camcorders/sport-and-action-cams/c/scc-5-7?q=%3Arelevance&show=All&view=grid"},
@@ -99,12 +99,13 @@ public class Thesource {
             int ss = 0;
             for (int i = 0; i < urls.length; i++) {
                 try {
-
-                    String category_id = urls[i][0];
+                    String tcarr[] = urls[i][1].split("/");
+                    String category_title = tcarr[4];
+                    category_title += "=>" + tcarr[5];
                     ///// Deleting existing products ///
-                    String queryCheck = "DELETE FROM items WHERE category = ?";
+                    String queryCheck = "DELETE FROM items WHERE category_title = ?";
                     PreparedStatement st = connection.prepareStatement(queryCheck);
-                    st.setString(1, category_id);
+                    st.setString(1, category_title);
                     int rs = st.executeUpdate();
                     //////////////////////
                     String urlstring = urls[i][1];
@@ -157,13 +158,13 @@ public class Thesource {
                         try {
                             Statement stmt = connection.createStatement();
                             stmt.execute("set names 'utf8'");
-                            String sql = "INSERT INTO items (p_id,category,title,status,link,price,image_url,description,specification,other)"
+                            String sql = "INSERT INTO items (p_id,category_title,title,status,link,price,image_url,description,specification,other)"
                                     + "VALUES(?,?,?,?,?,?,?,?,?,?)";
 
                             PreparedStatement pstmt = connection.prepareStatement(sql);
                             // Set the values
                             pstmt.setString(1, "thesource_" + id);
-                            pstmt.setString(2, category_id);
+                            pstmt.setString(2, category_title);
                             pstmt.setString(3, name);
                             pstmt.setInt(4, in_stock);
                             pstmt.setString(5, link);
